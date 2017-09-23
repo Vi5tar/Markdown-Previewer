@@ -9,19 +9,16 @@ class MyComponent extends React.Component {
   handleInput(event) {
     this.setState({ input: event.target.value });
   }
-
   render() {
+    {
+      document.getElementById("content").innerHTML = marked(this.state.input);
+    }
     return React.createElement(
       "div",
       null,
-      React.createElement("input", { value: this.state.input, onChange: this.handleInput }),
-      React.createElement(
-        "p",
-        null,
-        this.state.input
-      )
+      React.createElement("textarea", { value: this.state.input, onChange: this.handleInput })
     );
   }
-};
+}
 
 ReactDOM.render(React.createElement(MyComponent, null), document.getElementById("markdownPreview"));
