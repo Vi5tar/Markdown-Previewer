@@ -4,5 +4,5 @@
  "*.jsx",
  "*.es6"
  ],
- "presets": ["env", "es2017", "react"]
+ "presets": ["react"]
 }

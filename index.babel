@@ -7,21 +7,18 @@ class MyComponent extends React.Component {
     this.handleInput = this.handleInput.bind(this);
   };
   handleInput(event) {
-		this.setState({
-			input: event.target.value
-		});
-	}
+    this.setState({input: event.target.value});
+  }
+
   render() {
     return (
       <div>
-        <input
-        	value={this.state.input}
-        	onChange={this.handleInput} />
-          <p>{this.state.input}</p>
-        </div>
-      );
+        <input value={this.state.input} onChange={this.handleInput}/>
+        <p>{this.state.input}</p>
+      </div>
+    );
   }
 };
 
-
-ReactDOM.render(<MyComponent />, document.getElementById("markdownPreview"));
+ReactDOM.render(
+  <MyComponent/>, document.getElementById("markdownPreview"));
