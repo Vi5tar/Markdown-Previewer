@@ -1,0 +1,14 @@
+body {
+  margin-top: 5%;
+}
+
+#inputText {
+  float: right;
+  width: 100%;
+  height: 400px;
+}
+
+#content {
+  width: 400px;
+  height: 400px;
+}
